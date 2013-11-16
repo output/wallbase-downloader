@@ -36,6 +36,12 @@
     }
     
     $random = mt_rand(0,count($goodlinks));
+    $used = preg_split('/\s/',trim(shell_exec('ls /home/victor/.wallpapers/old/ | grep '.$goodlinks[$random])));
+    do {
+        $random = mt_rand(0,count($goodlinks));
+        $used = preg_split('/\s/',trim(shell_exec('ls /home/victor/.wallpapers/old/ | grep '.$goodlinks[$random])));
+    } while (empty($used[0])!=1);
+    
     shell_exec('wget http://wallpapers.wallbase.cc/rozne/wallpaper-'.$goodlinks[$random].'.jpg -O /home/victor/.wallpapers/lockscreen.jpg');
     shell_exec('wget http://wallpapers.wallbase.cc/rozne/wallpaper-'.$goodlinks[$random].'.jpg -O /home/victor/.wallpapers/old/'.date('Y-m-d_H:i:s').'-wallpaper-'.$goodlinks[$random].'.jpg');
     
