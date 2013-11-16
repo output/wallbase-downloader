@@ -1,5 +1,5 @@
 #Wallbase Downloader
-This is a simple script I use together with a cron job to pull pics for my lockscreen pictures.
+This is a simple script I use together with a cron job to pull pics for my lockscreen.
 
 For the scraping part of it I use https://github.com/cubiclesoft/ultimate-web-scraper
 
