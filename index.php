@@ -43,7 +43,7 @@
     } while (empty($used[0])!=1);
     
     shell_exec('wget http://wallpapers.wallbase.cc/rozne/wallpaper-'.$goodlinks[$random].'.jpg -O /home/victor/.wallpapers/lockscreen.jpg');
-    shell_exec('wget http://wallpapers.wallbase.cc/rozne/wallpaper-'.$goodlinks[$random].'.jpg -O /home/victor/.wallpapers/old/'.date('Y-m-d_H:i:s').'-wallpaper-'.$goodlinks[$random].'.jpg');
+    shell_exec('cp /home/victor/.wallpapers/lockscreen.jpg /home/victor/.wallpapers/old/'.date('Y-m-d_H:i:s').'-wallpaper-'.$goodlinks[$random].'.jpg');
     
   }
 ?>
