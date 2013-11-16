@@ -7,7 +7,6 @@
   $url = "http://wallbase.cc/toplist?section=wallpapers&q=&res_opt=eqeq&res=0x0&thpp=32&purity=000&board=21&aspect=0.00&ts=3d";
   $web = new WebBrowser();
   
-  
   $result = $web->Process($url);
 
   //error handling
@@ -44,6 +43,5 @@
     
     shell_exec('wget http://wallpapers.wallbase.cc/rozne/wallpaper-'.$goodlinks[$random].'.jpg -O /home/victor/.wallpapers/lockscreen.jpg');
     shell_exec('cp /home/victor/.wallpapers/lockscreen.jpg /home/victor/.wallpapers/old/'.date('Y-m-d_H:i:s').'-wallpaper-'.$goodlinks[$random].'.jpg');
-    
   }
 ?>
