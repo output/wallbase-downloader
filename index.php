@@ -4,7 +4,12 @@
   require_once "simple_html_dom.php";
   
   $html = new simple_html_dom();
-  $url = "http://wallbase.cc/toplist?section=wallpapers&q=&res_opt=eqeq&res=0x0&thpp=32&purity=000&board=21&aspect=0.00&ts=3d";
+  // SFW
+  //$url = "http://wallbase.cc/toplist?section=wallpapers&q=&res_opt=eqeq&res=0x0&thpp=32&purity=100&board=21&aspect=0.00&ts=3d";
+  // SFW+SKETCHY
+  $url = "http://wallbase.cc/toplist?section=wallpapers&q=&res_opt=eqeq&res=0x0&thpp=32&purity=110&board=21&aspect=0.00&ts=3d";
+  // SKETCHY
+  //$url = "http://wallbase.cc/toplist?section=wallpapers&q=&res_opt=eqeq&res=0x0&thpp=32&purity=010&board=21&aspect=0.00&ts=3d";
   $web = new WebBrowser();
   
   $result = $web->Process($url);
